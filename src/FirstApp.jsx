@@ -31,7 +31,7 @@ const FirstApp = ({
 return (
     //Fragmento, nodo padre para poner elementos debajo de otros
     <>
-        <h1>{title}</h1>
+        <h1 data-testid="test-title"> {title} </h1>
 
         {/* las funciones se escriben con el parentesis
         <h1>{ saludo() }</h1>
@@ -40,6 +40,7 @@ return (
        {/* se pone entre llaves para escribir codigo JS
        <code> { JSON.stringify (newMessage)}</code> */} 
 
+        <p>{subTitle}</p>
         <p>{subTitle}</p>
         <p>{name}</p>
     </>
@@ -50,6 +51,15 @@ FirstApp.propTypes ={
 title: PropTypes.string.isRequired,
 subTitle: PropTypes.string,
 }
+
+
+/*FirstApp.defaultProps={
+    name: 'Yoda',
+    subTitle: 'NO hay subtítulo',
+    //title: 'NO hay título',
+}
+    */
+
 
 
 
